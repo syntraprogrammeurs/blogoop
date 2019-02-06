@@ -96,7 +96,24 @@
 			Title<small> Subtitle</small>
 		</h1>
 		<?php
-			
+			$user = new User();
+			$resultaat = $user->find_all_users();
+			while($row = mysqli_fetch_array($resultaat)){
+				echo $row["id"] . ' - ' . $row["username"] . "<br>";
+			}
+
+			$resultaat = User::find_all_users();
+		        while($row = mysqli_fetch_array($resultaat)){
+		            echo $row["id"] . ' - ' . $row["username"] . "<br>";
+		        }
+
+
+            $user2 = new User();
+			$resultaat = $user2->find_user(3);
+            $user_info = mysqli_fetch_array($resultaat);
+            echo $user_info["id"] . ' - ' . $user_info["username"];
+
+
 		?>
 	</div>
 </div>
