@@ -26,5 +26,29 @@ class Database
             die("Database connection is mislukt" . mysqli_error());
         }
     }
+
+    /**1**/
+    public function query($sql){
+        $result = $this->connection->query($sql);
+        $this->confirm_query($result);
+        return $result;
+    }
+
+    /** 2 $result voert de query op de database uit**/
+    private function confirm_query($result){
+        if(!$result){
+            die("database query kon niet worden uitgevoerd" . $this->connection->error);
+        }}
+
+     /** 3 BEVEILIGING/SECURITY -> sql injecties vermijden**/
+     public function escape_string($string){
+         $escaped_string = $this->connection->real_escape_string($string);
+         return $escaped_string;
+        }
+
+
+
+
+
 }
 $database = new Database();
