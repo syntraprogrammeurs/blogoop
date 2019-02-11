@@ -115,6 +115,19 @@
 
 
 		?>
+
+		<h2>CREATE USER</h2>
+		<?php
+			$user = new User();
+			$user->username = 'Brent';
+			/*$hash = md5('123');/**hashing password toegekend aan de variabele hash*/
+			$user->password = '123';
+			$user->first_name = 'Brent';
+			$user->last_name = 'Vanhooren';
+
+			$user->create();
+
+		?>
 	</div>
 </div>
 </div>

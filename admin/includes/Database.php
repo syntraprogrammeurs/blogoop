@@ -46,7 +46,12 @@ class Database
          return $escaped_string;
         }
 
-
+    /***mysqli_insert_id**/
+    /** haalt de laatste uitgevoerd id op van een tabel die een primary key met
+    autoincrement heeft!*/
+    public function the_insert_id(){
+        return mysqli_insert_id($this->connection);
+    }
 
 
 
