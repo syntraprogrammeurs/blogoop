@@ -119,15 +119,35 @@
 		<h2>CREATE USER</h2>
 		<?php
 			$user = new User();
-			$user->username = 'Brent';
+			$user->username = 'Neville';
+
 			/*$hash = md5('123');/**hashing password toegekend aan de variabele hash*/
 			$user->password = '123';
-			$user->first_name = 'Brent';
-			$user->last_name = 'Vanhooren';
+			$user->first_name = 'Neville';
+			$user->last_name = 'Verleye';
 
 			$user->create();
 
 		?>
+
+		<h2>Update user</h2>
+		<?php
+
+			$user = User::find_user(1);
+			$user->last_name = "WILLIAM";
+			$user->first_name = 'Piet';
+
+			$user->update();
+
+			?>
+
+		<h2>Delete user</h2>
+        <?php
+
+        $user = User::find_user(3);
+        $user->delete();
+
+        ?>
 	</div>
 </div>
 </div>

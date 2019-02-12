@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
                        value="<?php echo htmlentities($password); ?>">
             </div>
             <div class="form-group">
-                <input type="submit" value="Inlogggen" class="btn btn-primary" name="submit">
+                <input type="submit" value="Inloggen" class="btn btn-primary" name="submit">
             </div>
         </form>
     </div>
