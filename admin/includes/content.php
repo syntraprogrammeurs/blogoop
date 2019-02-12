@@ -119,14 +119,14 @@
 		<h2>CREATE USER</h2>
 		<?php
 			$user = new User();
-			$user->username = 'Neville';
+			$user->username = 'test';
 
 			/*$hash = md5('123');/**hashing password toegekend aan de variabele hash*/
 			$user->password = '123';
-			$user->first_name = 'Neville';
-			$user->last_name = 'Verleye';
+			$user->first_name = 'test';
+			$user->last_name = 'test';
 
-			$user->create();
+			$user->save();
 
 		?>
 
@@ -137,15 +137,15 @@
 			$user->last_name = "WILLIAM";
 			$user->first_name = 'Piet';
 
-			$user->update();
+			$user->save();
 
 			?>
 
 		<h2>Delete user</h2>
         <?php
 
-        $user = User::find_user(3);
-        $user->delete();
+       /* $user = User::find_user(3);
+        $user->delete();*/
 
         ?>
 	</div>
