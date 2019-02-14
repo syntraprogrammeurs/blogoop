@@ -92,62 +92,32 @@
 
 <div class="row">
 	<div class="col-12">
-		<h1 class="page-header">
-			Title<small> Subtitle</small>
-		</h1>
-		<?php
+		<div class="row">
+			<div class="col-6">
+				<h1 class="page-header">
+					Title<small> Photo onderdeel</small>
+				</h1>
+				<?php
+		            $photos = Photo::find_all();
+		            foreach($photos as $photo){?>
 
-			/***VOLLEDIG OOP FIND USER BY ID**/
-        $found_user = User::find_user(1);
-       
-        echo $found_user->password . '<br>';
-        echo $found_user->username . '<br>';
+					<h2><?php echo $photo->title; ?></h2>
 
+		           <?php } ?>
+			</div>
+			<div class="col-6">
+				<h2>image</h2>
+				<?php
+					$photo = new Photo();
+					$photo->title = "Sam";
+					$photo->description = "Lorem ipsum Sam";
+					$photo->size = 15;
 
+					$photo->create();
 
-        /**VOLLEDIG OOP MET FIND ALL USERS**/
-		$users = User::find_all_users();
-		foreach($users as $user){
-			echo $user->username . "<br>";
-		}
-
-
-
-
-		?>
-
-		<h2>CREATE USER</h2>
-		<?php
-			$user = new User();
-			$user->username = 'test';
-
-			/*$hash = md5('123');/**hashing password toegekend aan de variabele hash*/
-			$user->password = '123';
-			$user->first_name = 'test';
-			$user->last_name = 'test';
-
-			$user->save();
-
-		?>
-
-		<h2>Update user</h2>
-		<?php
-
-			$user = User::find_user(1);
-			$user->last_name = "WILLIAM";
-			$user->first_name = 'Piet';
-
-			$user->save();
-
-			?>
-
-		<h2>Delete user</h2>
-        <?php
-
-       /* $user = User::find_user(3);
-        $user->delete();*/
-
-        ?>
+				?>
+			</div>
+		</div>
 	</div>
 </div>
 </div>
