@@ -26,10 +26,23 @@ $photos = Photo::find_all();
                 <tbody>
                     <?php foreach($photos as $photo): ?>
                         <tr>
-                            <td><img class="img-fluid" src="<?php echo $photo->picture_path(); ?>" height="62"
+
+                            <td><img  src="<?php echo $photo->picture_path(); ?>" height="62"
                                      width="62"
-                                     alt=""></td>
-                            <td><?php echo $photo->photo_id; ?></td>
+                                     alt="">
+	                            <div>
+		                            <a class="btn btn-danger rounded-0" href="delete_photo.php?id=<?php echo
+		                            $photo->id; ?>">Delete</a>
+		                            <a class="btn btn-warning rounded-0" href="edit_photo.php?id=<?php echo
+                                    $photo->id; ?>">Edit</a>
+		                            <a class="btn btn-success rounded-0" href="#">View</a>
+	                            </div>
+
+                            </td>
+
+                            <td><?php echo $photo->id; ?>
+
+                            </td>
                             <td><?php echo $photo->title; ?></td>
                             <td><?php echo $photo->filename; ?></td>
                             <td><?php echo $photo->size; ?></td>
