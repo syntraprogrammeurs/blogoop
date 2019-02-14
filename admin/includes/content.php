@@ -108,14 +108,16 @@
 			<div class="col-6">
 				<h2>image</h2>
 				<?php
-					$photo = new Photo();
+/*					$photo = new Photo();
 					$photo->title = "Sam";
 					$photo->description = "Lorem ipsum Sam";
 					$photo->size = 15;
 
 					$photo->create();
 
-				?>
+				*/
+			echo SITE_ROOT;
+?>
 			</div>
 		</div>
 	</div>
