@@ -5,6 +5,7 @@
  * Date: 6/02/2019
  * Time: 10:12
  */
+
 defined('DS') ? null : define('DS', DIRECTORY_SEPARATOR);
 define('SITE_ROOT', DS . 'wamp64' . DS . 'www' . DS . 'blogoop');
 defined('INCLUDES_PATH') ? null : define('INCLUDES_PATH', SITE_ROOT.DS.'admin'.DS.'includes');

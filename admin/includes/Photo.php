@@ -20,7 +20,7 @@ class Photo extends Dbobject
     public $size;
 
     public $tmp_path;
-    public $upload_directory;
+    public $upload_directory = 'img';
     public $errors = array();
     public $upload_errors_array = array(
         UPLOAD_ERR_OK => "There is no error",
