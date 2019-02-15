@@ -4,24 +4,25 @@ if (!$session->is_signed_in()) {
     redirect("login.php");
 
 }
-if (empty($_GET['id'])) {
-    redirect('photos.php');
+
+if(empty($_GET['id'])){
+
+    redirect("photos.php");
 }else{
-    $photo = Photo::find_by_id($_GET['id']);
+	    $photo = Photo::find_by_id($_GET['id']);
+
     if(isset($_POST['update'])){
-    	if($photo){
-    		$photo->title = $_POST['title'];
+        if($photo){
+
+            $photo->title = $_POST['title'];
             $photo->caption = $_POST['caption'];
             $photo->alternate_text = $_POST['alternate_text'];
             $photo->description = $_POST['description'];
             $photo->update();
-	    }
+            redirect("photos.php");
+        }
     }
 }
-
-
-
-
 ?>
 
 <?php include("includes/sidebar.php"); ?>
@@ -30,8 +31,7 @@ if (empty($_GET['id'])) {
 	<div class="row">
 		<div class="col-12">
 			<h1>welkom edit pagina</h1>
-
-			<form action="edit_photo.php" method="post">
+			<form action="edit_photo.php?id=<?php echo $photo->id; ?>" method="post">
 				<div class="row">
 					<div class="col-12 col-md-8">
 						<div class="form-group">
@@ -39,6 +39,10 @@ if (empty($_GET['id'])) {
 							<input type="text" name="title" class="form-control"
 
 							value="<?php echo $photo->title; ?>">
+						</div>
+						<div class="form-group">
+
+							<a class="thumbnail" href=""><img src="<?php echo $photo->picture_path(); ?>" alt=""></a>
 						</div>
 						<div class="form-group">
 							<label for="caption">Caption</label>

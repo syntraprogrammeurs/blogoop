@@ -55,6 +55,8 @@
 <!-- Page level custom scripts -->
 <script src="js/demo/chart-area-demo.js"></script>
 <script src="js/demo/chart-pie-demo.js"></script>
+<script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+<script src="js/scripts.js"></script>
 
 </body>
 

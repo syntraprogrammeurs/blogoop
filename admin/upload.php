@@ -10,7 +10,6 @@ include("includes/header.php");
 include("includes/sidebar.php");
 include("includes/content-top.php");
 
-
 if(!$session->is_signed_in()){
     redirect('login.php');
 }
