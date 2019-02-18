@@ -22,6 +22,7 @@ class Dbobject
         return static::find_this_query("SELECT * FROM " . static::$db_table);
     }
 
+
     public static function find_by_id($id){
         /*global $database;*/
         $the_result_array = static::find_this_query("SELECT * FROM " . static::$db_table . " WHERE id=$id LIMIT 1");
