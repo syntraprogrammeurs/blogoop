@@ -89,7 +89,7 @@ class Photo extends Dbobject
         if($this->filename !== ''){
            return $this->returnpath = $this->upload_directory.DS.$this->filename;
         }else{
-            return $this->returnpath = 'https://place-hold.it/62x62';
+            return $this->returnpath = 'https://place-hold.it/400x400';
         }
       }
     public function delete_photo(){

@@ -7,3 +7,11 @@
  */
 ?>
 <h1>Sidebar menu</h1>
+<h2>Last 5 posts</h2>
+<ul>
+	<li>post 1</li>
+	<li>post 1</li>
+	<li>post 1</li>
+	<li>post 1</li>
+</ul>
+
