@@ -3,7 +3,11 @@ if(!$session->is_signed_in()){
     redirect('login.php');
 }
 
-$comments = Comment::find_all();
+if(empty($_GET['id'])){
+	redirect('photos.php');
+}
+
+$comments = Comment::find_the_comments($_GET['id']);
 
 
 ?>
@@ -30,7 +34,8 @@ $comments = Comment::find_all();
 
                     <tr>
                         <td>
-	                        <a href="delete_comment.php?id=<?php echo $comment->id; ?>" class="btn btn-danger btn-sm
+	                        <a href="delete_comment_photo.php?id=<?php echo $comment->id; ?>" class="btn btn-danger
+	                        btn-sm
 	                        m-2">
 		                        DELETE
 	                        </a>
