@@ -22,12 +22,14 @@ $users = User::find_all_users();
                         <th>Username</th>
                         <th>First Name</th>
                         <th>Last Name</th>
+	                    <th>Role</th>
                     </tr>
                 </thead>
 	            <tbody>
 	            <?php
 	                foreach($users as $user) : ?>
-
+						<?php $role = Role::find_by_id($user->role_id);
+						?>
 		                <tr>
 			                <td><?php echo $user->id; ?></td>
 			                <td>
@@ -45,6 +47,7 @@ $users = User::find_all_users();
 			                <td><?php echo $user->username; ?></td>
 			                <td><?php echo $user->first_name; ?></td>
 			                <td><?php echo $user->last_name; ?></td>
+			                <td><?php echo $role->role; ?></td>
 		                </tr>
 
 	                <?php endforeach; ?>

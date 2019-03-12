@@ -35,13 +35,26 @@
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-
-                <a class="collapse-item" href="createuser.php">Create user</a>
-                <a class="collapse-item" href="cards.html">Edit user</a>
-	            <a class="collapse-item" href="cards.html">Delete user</a>
+	            <a class="collapse-item" href="users.php">All users</a>
+                <a class="collapse-item" href="add_user.php">Create user</a>
             </div>
         </div>
     </li>
+    <!-- ROLES -->
+	<li class="nav-item">
+		<a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+		   aria-controls="collapseThree">
+			<i class="fas fa-user"></i>
+			<span>Roles</span>
+		</a>
+		<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionSidebar">
+			<div class="bg-white py-2 collapse-inner rounded">
+				<a class="collapse-item" href="roles.php">All roles</a>
+				<a class="collapse-item" href="add_role.php">Create Role</a>
+			</div>
+		</div>
+	</li>
+
 
     <!-- UPLOAD -->
 	<li class="nav-item">

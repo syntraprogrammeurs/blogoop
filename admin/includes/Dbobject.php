@@ -6,12 +6,13 @@
  * Time: 15:11
  */
 
+
 class Dbobject
 {
     public static function find_this_query($sql){
         global $database;
         $result = $database->query($sql);
-        $the_object_array = array();
+        $the_object_array = array();//declartie van een lege array
         while($row = mysqli_fetch_array($result)){
             $the_object_array[] = static::instantie($row);
         }

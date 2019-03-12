@@ -10,7 +10,7 @@ class User extends Dbobject
 {
     /**VARIABELEN**/
     protected static $db_table = "users";
-    protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name','user_image');
+    protected static $db_table_fields = array('username', 'password', 'first_name', 'last_name','user_image','role_id');
 
     public $id;
     public $username;
@@ -18,9 +18,9 @@ class User extends Dbobject
     public $first_name;
     public $last_name;
     public $user_image;
+    public $role_id;
     public $upload_directory = 'img'.DS.'users';
     public $image_placeholder = 'http://place-hold.it/400x400&text=image';
-
 
     /***CONSTRUCT**/
     function __construct(){
@@ -109,5 +109,6 @@ class User extends Dbobject
             }
         }
     }
+
 
 }

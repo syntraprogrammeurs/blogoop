@@ -20,6 +20,7 @@ if(isset($_POST['submit'])) {
     $photo->title = $_POST['title'];
     $photo->set_file($_FILES['file']);
 
+
     if($photo->save()) {
         $message = "Photo uploaded sucessfully";
     } else {

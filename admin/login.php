@@ -1,6 +1,8 @@
 <?php
 require_once("includes/header.php");
 
+
+
 //*controle of er reeds is ingelogd**/
 if($session->is_signed_in()){
     redirect("index.php");
@@ -34,7 +36,7 @@ if(isset($_POST['submit'])){
 		<h3 class="bg-warning text-white text-center">
 			<?php
 
-			echo $the_message;
+			//echo $the_message;
 
 			?></h3>
         <form action="" method="post">
